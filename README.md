@@ -9,18 +9,18 @@ Whole server is written in python and it contains only one file.
 - Create directory for app e.g. ```mkdir /somelaction/keylogger/```
 - Create directory for logs (it is recommended to create it in same directory as app) e.g. ```mkdir /somelocation/keylogger/logs```
 - Open ```server.py``` file in editor for example ```vim``` and change variables on lines from ```7``` to ```10``` according to your needs:
-  > - ```threadmax``` describes how much threads server will run
-  > - ```host``` your computer's IP address
-  > - ```port``` 5175 by default, but you can change it (make sure that it is open in firewall)
-  > - ```logpath``` path to your log folder
+    * ```threadmax``` describes how much threads server will run
+    * ```host``` your computer's IP address
+    * ```port``` 5175 by default, but you can change it (make sure that it is open in firewall)
+    * ```logpath``` path to your log folder
 - Run server by following command: ```screen -dm bash -c '/usr/bin/python3 /somelocation/sockets.py'```
 
 ## 2. Client side
 Now, let's set up the client side.
 - Open ```main.cpp``` file
 - Change constants on lines ```7``` and ```8``` according to what you have set on server side:
-  > - ```IP``` your computer's IP address
-  > - ```PORT``` port on server
+    * ```IP``` your computer's IP address
+    * ```PORT``` port on server
 - Compile with command: ```g++ main.cpp Telnet.cpp Keys.cpp -lws2_32 -o keylogger.exe```
 
 That's it!
